@@ -1,0 +1,54 @@
+MongoDB Commands for Databases
+
+View all databases
+show dbs
+
+Create a new or switch databases
+use dbName
+
+View current database
+db
+
+Delete Database
+db.dropDatabase()
+
+
+MongoDB Commands for Collections
+show collections
+
+Create a collection named 'mycomments'
+db.createCollection('mycomments')
+
+Drop a collection named 'mycomments'
+db.'mycomments'.drop()
+
+Mongo DB Commands for Rows
+Show all rows in a collection
+db.comments.find()
+
+Insert one Row
+db.comments.insert({
+    'name' : 'Sadiq',
+    'lang' : 'Javascript',
+    'membersince' : 5
+})
+Insert many Rows
+db.comments.insertMany([{
+    'name' : 'Sadiq',
+    'lang' : 'Javascript',
+    'membersince' : 5
+},
+{
+    'name' : 'Sunny',
+    'lang' : 'Python',
+    'membersince' : 3
+},
+{
+    'name' : 'Akash',
+    'lang' : 'Java',
+    'membersince' : 4
+}])
+
+
+Show all rows in a collection(Prettified)
+db.comments.find().pretty()
