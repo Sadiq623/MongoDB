@@ -52,3 +52,11 @@ db.comments.insertMany([{
 
 Show all rows in a collection(Prettified)
 db.comments.find().pretty()
+
+
+db.comments.insert({
+    'name' : 'Sadiq',
+    'lang' : 'Javascript',
+    'membersince' : 5,
+    'date' : new Date()
+})
